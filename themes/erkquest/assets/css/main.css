@@ -7,6 +7,15 @@
     the images as variables */
 
     :root {
+      /* Color Palette */
+      --color-orange: #FFA500;
+      --color-navy: #1A2B3C;
+      --color-cream: #FFF5E6;
+      --color-dark-gray: #333333;
+      --color-teal: #2A9D8F;
+      --color-light-gray: #F5F5F5;
+
+      /* Layout images */
       --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
       --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
 
@@ -52,11 +61,12 @@ and then link it! Many fonts have separate files for each style
   body {
       font-family: 'Nunito', sans-serif;
       margin: 0;
-      background-color: #08031A;
+      background-color: var(--color-cream);
       /* you can delete the line below if you'd prefer to not use an image */
       background-size: 65px;
-      color: #fceaff;
-      background-image: var(--body-bg-image);
+      color: var(--color-dark-gray);
+      background: orange;
+      /* background-image: var(--body-bg-image); */
   }
 
   * {
@@ -86,16 +96,19 @@ and change the media query according to the comment! */
   /* the area below is for all links on your page
 EXCEPT for the navigation */
   #container a {
-      color: #ED64F5;
+      color: var(--color-teal);
       font-weight: bold;
-      /* if you want to remove the underline
-you can add a line below here that says:
-text-decoration:none; */
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+
+  #container a:hover {
+      color: var(--color-orange);
   }
 
   #header {
       width: 100%;
-      background-color: #5e4e8c;
+      background-color: var(--color-navy);
       /* header color here! */
       height: 150px;
       /* this is only for a background image! */
@@ -108,7 +121,7 @@ you can add them directly to the <div id="header"></div> element! */
   /* navigation section!! */
   #navbar {
       height: 40px;
-      background-color: #13092D;
+      background-color: var(--color-navy);
       /* navbar color */
       width: 100%;
   }
@@ -127,17 +140,17 @@ you can add them directly to the <div id="header"></div> element! */
 
   /* navigation links*/
   #navbar li a {
-      color: #ED64F5;
+      color: var(--color-cream);
       /* navbar text color */
       font-weight: 800;
       text-decoration: none;
+      transition: color 0.3s ease;
       /* this removes the underline */
   }
 
   /* navigation link when a link is hovered over */
   #navbar li a:hover {
-      color: #a49cba;
-      text-decoration: underline;
+      color: var(--color-orange);
   }
 
   #flex {
@@ -148,7 +161,7 @@ you can add them directly to the <div id="header"></div> element! */
 if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
   aside {
-      background-color: #241445;
+      background-color: var(--color-light-gray);
       width: 200px;
       padding: 20px;
       font-size: smaller;
@@ -159,7 +172,7 @@ create styles for #leftSidebar and #rightSidebar */
   /* this is the color of the main content area,
 between the sidebars! */
   main {
-      background-color: #43256E;
+      background-color: var(--color-cream);
       flex: 1;
       padding: 20px;
       order: 2;
@@ -180,19 +193,20 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
   }
 
   footer {
-      background-color: #13092D;
+      background-color: var(--color-navy);
       /* background color for footer */
       width: 100%;
       height: 40px;
       padding: 10px;
       text-align: center;
       /* this centers the footer text */
+      color: var(--color-cream);
   }
 
   h1,
   h2,
   h3 {
-      color: #ED64F5;
+      color: var(--color-navy);
   }
 
   h1 {
@@ -201,13 +215,13 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
 
   strong {
       /* this styles bold text */
-      color: #ED64F5;
+      color: var(--color-orange);
   }
 
   /* this is just a cool box, it's the darker colored one */
   .box {
-      background-color: #13092D;
-      border: 1px solid #ED64F5;
+      background-color: var(--color-light-gray);
+      border: 1px solid var(--color-orange);
       padding: 10px;
   }
 
@@ -218,7 +232,8 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
       height: 30px;
       padding: 10px;
       font-size: smaller;
-      background-color: #13092D;
+      background-color: var(--color-navy);
+      color: var(--color-cream);
   }
 
 
@@ -257,6 +272,7 @@ feel free to play around with the order!
       }
 
       #navbar ul {
-          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: center;
       }
   }
