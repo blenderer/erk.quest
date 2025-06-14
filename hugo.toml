@@ -1,0 +1,4 @@
+baseURL = 'https://erk.quest/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'erkquest'
