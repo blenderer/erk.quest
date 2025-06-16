@@ -1,32 +1,28 @@
 /* user styles */
 
-            /* styles are what change the color and sizes of stuff on your site. */
+/* styles are what change the color and sizes of stuff on your site. */
 
-            /* these are variables that are being used in the code
+/* these are variables that are being used in the code
     these tended to confuse some people, so I only kept 
     the images as variables */
 
-    :root {
-      /* Color Palette */
-      --color-orange: #FFA500;
-      --color-navy: #1A2B3C;
-      --color-cream: #FFF5E6;
-      --color-dark-gray: #333333;
-      --color-teal: #2A9D8F;
-      --color-light-gray: #F5F5F5;
+:root {
+  /* Color Palette */
+  --color-orange: #ffa500;
+  --color-navy: #1a2b3c;
+  --color-cream: #fff5e6;
+  --color-dark-gray: #333333;
+  --color-teal: #2a9d8f;
+  --color-light-gray: #f5f5f5;
 
-      /* Layout images */
-      --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
-      --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
+  /* colors */
+  --content: #43256e;
+}
 
-      /* colors */
-      --content: #43256E;
-  }
+/* if you have the URL of a font, you can set it below */
+/* feel free to delete this if it's not your vibe */
 
-  /* if you have the URL of a font, you can set it below */
-  /* feel free to delete this if it's not your vibe */
-
-  /* this seems like a lot for just one font and I would have to agree 
+/* this seems like a lot for just one font and I would have to agree 
 but I wanted to include an example of how to include a custom font.
 If you download a font file you can upload it onto your Neocities
 and then link it! Many fonts have separate files for each style
@@ -34,245 +30,254 @@ and then link it! Many fonts have separate files for each style
 
 */
 
-  @font-face {
-      font-family: Nunito;
-      src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
-  }
+@font-face {
+  font-family: Nunito;
+  src: url("https://sadhost.neocities.org/fonts/Nunito-Regular.ttf");
+}
 
-  @font-face {
-      font-family: Nunito;
-      src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
-      font-weight: bold;
-  }
+@font-face {
+  font-family: Nunito;
+  src: url("https://sadhost.neocities.org/fonts/Nunito-Bold.ttf");
+  font-weight: bold;
+}
 
-  @font-face {
-      font-family: Nunito;
-      src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
-      font-style: italic;
-  }
+@font-face {
+  font-family: Nunito;
+  src: url("https://sadhost.neocities.org/fonts/Nunito-Italic.ttf");
+  font-style: italic;
+}
 
-  @font-face {
-      font-family: Nunito;
-      src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
-      font-style: italic;
-      font-weight: bold;
-  }
+@font-face {
+  font-family: Nunito;
+  src: url("https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: bold;
+}
 
-  body {
-      font-family: 'Nunito', sans-serif;
-      margin: 0;
-      background-color: var(--color-cream);
-      /* you can delete the line below if you'd prefer to not use an image */
-      background-size: 65px;
-      color: var(--color-dark-gray);
-      background: orange;
-      /* background-image: var(--body-bg-image); */
-  }
+body {
+  font-family: "Kosugi Maru", "MS Gothic", sans-serif;
+  margin: 0;
+  background-color: var(--color-orange);
+  background-size: 65px;
+  color: var(--color-dark-gray);
+}
 
-  * {
-      box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  /* below this line is CSS for the layout */
+/* below this line is CSS for the layout */
 
-  /* this is a CSS comment
+/* this is a CSS comment
 to uncomment a line of CSS, remove the * and the /
 before and after the text */
 
-
-  /* the "container" is what wraps your entire website */
-  /* if you want something (like the header) to be Wider than
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
 the other elements, you will need to move that div outside
 of the container */
-  #container {
-      max-width: 900px;
-      /* this is the width of your layout! */
-      /* if you change the above value, scroll to the bottom
+#container {
+  max-width: 900px;
+  /* this is the width of your layout! */
+  /* if you change the above value, scroll to the bottom
 and change the media query according to the comment! */
-      margin: 0 auto;
-      /* this centers the entire page */
-  }
+  margin: 0 auto;
+  /* this centers the entire page */
+}
 
-  /* the area below is for all links on your page
+/* the area below is for all links on your page
 EXCEPT for the navigation */
-  #container a {
-      color: var(--color-teal);
-      font-weight: bold;
-      text-decoration: none;
-      transition: color 0.3s ease;
-  }
+#container a {
+  color: var(--color-teal);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  #container a:hover {
-      color: var(--color-orange);
-  }
+#container a:hover {
+  color: var(--color-orange);
+}
 
-  #header {
-      width: 100%;
-      background-color: var(--color-navy);
-      /* header color here! */
-      height: 150px;
-      /* this is only for a background image! */
-      /* if you want to put images IN the header, 
-you can add them directly to the <div id="header"></div> element! */
-      background-image: var(--header-image);
-      background-size: 100%;
-  }
+header {
+  position: relative;
+  margin-bottom: 6px;
+}
 
-  /* navigation section!! */
-  #navbar {
-      height: 40px;
-      background-color: var(--color-navy);
-      /* navbar color */
-      width: 100%;
-  }
+header h2 {
+  font-family: "Staatliches", cursive;
+}
 
-  #navbar ul {
-      display: flex;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      justify-content: space-evenly;
-  }
+header video {
+  width: 100%;
+}
 
-  #navbar li {
-      padding-top: 10px;
-  }
+header h2 {
+  margin: 0;
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
 
-  /* navigation links*/
-  #navbar li a {
-      color: var(--color-cream);
-      /* navbar text color */
-      font-weight: 800;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      /* this removes the underline */
-  }
+/* navigation section!! */
+#navbar {
+  background-color: var(--color-navy);
+  /* navbar color */
+  font-family: "Rampart One", cursive;
+}
 
-  /* navigation link when a link is hovered over */
-  #navbar li a:hover {
-      color: var(--color-orange);
-  }
+#navbar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
 
-  #flex {
-      display: flex;
-  }
+#navbar li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-  /* this colors BOTH sidebars
+/* navigation links*/
+#navbar li a {
+  font-family: "Staatliches", cursive;
+  color: var(--color-cream);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.6em;
+}
+
+/* navigation link when a link is hovered over */
+#navbar li a:hover {
+  color: var(--color-orange);
+}
+
+#flex {
+  display: flex;
+}
+
+/* this colors BOTH sidebars
 if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
-  aside {
-      background-color: var(--color-light-gray);
-      width: 200px;
-      padding: 20px;
-      font-size: smaller;
-      /* this makes the sidebar text slightly smaller */
-  }
+aside {
+  background-color: var(--color-light-gray);
+  width: 200px;
+  padding: 20px;
+  font-size: smaller;
+  /* this makes the sidebar text slightly smaller */
+}
 
-
-  /* this is the color of the main content area,
+/* this is the color of the main content area,
 between the sidebars! */
-  main {
-      background-color: var(--color-cream);
-      flex: 1;
-      padding: 20px;
-      order: 2;
-  }
+main {
+  background-color: var(--color-cream);
+  flex: 1;
+  padding: 20px;
+  order: 2;
+}
 
-  /* what's this "order" stuff about??
+/* what's this "order" stuff about??
 allow me to explain!
 if you're using both sidebars, the "order" value
 tells the CSS the order in which to display them.
 left sidebar is 1, content is 2, and right sidebar is 3! */
 
-  */ #leftSidebar {
-      order: 1;
-  }
+*/ #leftSidebar {
+  order: 1;
+}
 
-  #rightSidebar {
-      order: 3;
-  }
+#rightSidebar {
+  order: 3;
+}
 
-  footer {
-      background-color: var(--color-navy);
-      /* background color for footer */
-      width: 100%;
-      height: 40px;
-      padding: 10px;
-      text-align: center;
-      /* this centers the footer text */
-      color: var(--color-cream);
-  }
+footer {
+  background-color: var(--color-navy);
+  /* background color for footer */
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  /* this centers the footer text */
+  color: var(--color-cream);
+}
 
-  h1,
-  h2,
-  h3 {
-      color: var(--color-navy);
-  }
+/* Headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Staatliches", cursive;
+  color: var(--color-navy);
+  font-weight: 400;
+}
 
-  h1 {
-      font-size: 25px;
-  }
+h1 {
+  font-size: 25px;
+}
 
-  strong {
-      /* this styles bold text */
-      color: var(--color-orange);
-  }
+strong {
+  /* this styles bold text */
+  color: var(--color-orange);
+}
 
-  /* this is just a cool box, it's the darker colored one */
-  .box {
-      background-color: var(--color-light-gray);
-      border: 1px solid var(--color-orange);
-      padding: 10px;
-  }
+/* this is just a cool box, it's the darker colored one */
+.box {
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-orange);
+  padding: 10px;
+}
 
-  /* CSS for extras */
+/* CSS for extras */
 
-  #topBar {
-      width: 100%;
-      height: 30px;
-      padding: 10px;
-      font-size: smaller;
-      background-color: var(--color-navy);
-      color: var(--color-cream);
-  }
+#topBar {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  font-size: smaller;
+  background-color: var(--color-navy);
+  color: var(--color-cream);
+}
 
+/* BELOW THIS POINT IS MEDIA QUERY */
 
-  /* BELOW THIS POINT IS MEDIA QUERY */
-
-  /* so you wanna change the width of your page? 
+/* so you wanna change the width of your page? 
 by default, the container width is 900px.
 in order to keep things responsive, take your new height,
 and then subtrack it by 100. use this new number as the 
 "max-width" value below
 */
 
-  @media only screen and (max-width: 800px) {
-      #flex {
-          flex-wrap: wrap;
-      }
+@media only screen and (max-width: 800px) {
+  #flex {
+    flex-wrap: wrap;
+  }
 
-      aside {
-          width: 100%;
-      }
+  aside {
+    width: 100%;
+  }
 
-      /* the order of the items is adjusted here for responsiveness!
+  /* the order of the items is adjusted here for responsiveness!
 since the sidebars would be too small on a mobile device.
 feel free to play around with the order!
 */
-      main {
-          order: 1;
-      }
-
-      #leftSidebar {
-          order: 2;
-      }
-
-      #rightSidebar {
-          order: 3;
-      }
-
-      #navbar ul {
-          flex-direction: column;
-          align-items: center;
-      }
+  main {
+    order: 1;
   }
+
+  #leftSidebar {
+    order: 2;
+  }
+
+  #rightSidebar {
+    order: 3;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
