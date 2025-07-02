@@ -1,26 +1,28 @@
-<!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-<head>
-  {{ partial "head.html" . }}
-</head>
-<body>
-  <div id="container">
-    <header>
-      <video src="/ragded.mp4" autoplay loop muted playsinline></video>
-      <h2>Erk.Quest</h2>
-    </header>
-    <div id="headerArea">
-      <div id="navbar" style="margin-bottom: 10px;">
-        {{ partial "header.html" . }}
+<!doctype html>
+<html
+  lang="{{ site.Language.LanguageCode }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}"
+>
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <video src="ragded.mp4" autoplay loop muted playsinline></video>
+        <h2>Erk.Quest</h2>
+      </header>
+      <div id="headerArea">
+        <div id="navbar" style="margin-bottom: 10px;">
+          {{ partial "header.html" . }}
+        </div>
       </div>
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+      <footer id="footer" style="margin-top: 10px;">
+        {{ partial "footer.html" . }}
+      </footer>
     </div>
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
-    <footer id="footer" style="margin-top: 10px;">
-      {{ partial "footer.html" . }}
-    </footer>
-
-  </div>
-</body>
+  </body>
 </html>
