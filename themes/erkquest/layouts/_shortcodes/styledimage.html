@@ -1,0 +1,7 @@
+{{- with .Page.Resources.Get (.Get "path") }}
+  <img
+    src="{{ .RelPermalink }}"
+    style="{{ $.Get "style" | safeCSS }}"
+    alt="{{ $.Get "alt" }}"
+  />
+{{- end -}}

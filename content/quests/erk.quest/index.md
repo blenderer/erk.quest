@@ -11,9 +11,7 @@ In 2009, I was too busy playing [World of Warcraft](https://www.youtube.com/watc
 
 I've had SIXTEEN years to stew on this tragedy, but here I am wishing I could have archived the website myself
 
-![A side-profile picture of me. I have a beard, glasses and I'm holding a controller which is outside the crop](erk.jpg)
-
-$.Page.Resources
+{{< styledimage path="erk.jpg" alt="A side-profile picture of me. I have a beard, glasses and I'm holding a controller which is outside the crop" style="width: 250px;" >}}
 
 Anyway, here I am wishing to capture some of the magic of Geocities in a world which has transcended "websites".
 

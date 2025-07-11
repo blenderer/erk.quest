@@ -60,6 +60,9 @@ body {
   background-color: var(--color-orange);
   background-size: 65px;
   color: var(--color-dark-gray);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 * {
@@ -96,6 +99,10 @@ EXCEPT for the navigation */
 
 #container a:hover {
   color: var(--color-orange);
+}
+
+img {
+  max-width: 100%;
 }
 
 header {
